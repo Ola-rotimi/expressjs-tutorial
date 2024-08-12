@@ -3,7 +3,8 @@ const path = require("path");
 const app = express();
 
 //setup static and middleware
-app.use(express.static("./public"))
+app.use(express.static("./public")) //allows you access all resources without having to define them individually
+
 
 app.get("/", (req, res) => {
   res.sendFile(path.resolve(__dirname, "./navbar-app/index.html"));
